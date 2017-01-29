@@ -10,7 +10,6 @@ export default function Header (props) {
     <h3 className={styles.heading}>TEMPO</h3>
     <div className={styles.profileButtonContainer}>
       <img src="http://placehold.it/50x50"/>
-      <span>[username]</span>
     </div>
   </div>
 }
