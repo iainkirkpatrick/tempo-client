@@ -13,7 +13,7 @@ export function getProjects (data) {
         'Content-Type': 'application/json',
         'Accept': 'application/json'
       },
-      body: JSON.stringify({ query: 'query { projects { id } }' })
+      body: JSON.stringify({ query: 'query { projects { id title } }' })
     })
     .then((res) => {
       if (!res.ok) {

@@ -6,7 +6,7 @@ export default function Grid (props) {
   return <div className={styles.container}>
     {
       props.projects.map((proj) => {
-        return <span>{proj.id}</span>
+        return <span>{proj.title}</span>
       })
     }
   </div>
