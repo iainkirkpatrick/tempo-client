@@ -7,7 +7,7 @@ export default function Header (props) {
     <div className={styles.profileButtonContainer}>
       <img src="http://placehold.it/50x50"/>
     </div>
-    <h1 className={styles.heading}>TEMPO</h1>
+    <h3 className={styles.heading}>TEMPO</h3>
     <div className={styles.profileButtonContainer}>
       <img src="http://placehold.it/50x50"/>
       <span>[username]</span>

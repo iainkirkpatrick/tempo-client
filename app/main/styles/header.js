@@ -15,6 +15,7 @@ export default StyleSheet.create({
     alignItems: 'center'
   },
   heading: {
-    fontSize: '2rem'
+    // fontSize: '2rem',
+    fontFamily: "'avenir next', avenir, sans-serif"
   }
 })
