@@ -9,7 +9,7 @@ import MainContainer from './main/containers/main'
 
 // create stylesheet for stilr
 let stylesheet = document.createElement('style')
-stylesheet.textContent = StyleSheet.render()
+stylesheet.textContent = `body { margin: 0; } ${StyleSheet.render()}`
 document.head.appendChild(stylesheet)
 
 // create <app /> to mount into
