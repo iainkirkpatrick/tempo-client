@@ -6,7 +6,8 @@ export default StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     width: '100%',
-    padding: '0px 20px'
+    padding: '0px 20px',
+    borderBottom: '1px solid black'
   },
   profileButtonContainer: {
     display: 'flex',
