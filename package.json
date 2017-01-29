@@ -4,11 +4,13 @@
   "description": "web client for tempo",
   "main": "index.js",
   "scripts": {
-    "dev": "budo app/ --live --css ./index.css",
+    "dev": "budo app/ --live",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "browserify": {
-    "transform": ["babelify"]
+    "transform": [
+      "babelify"
+    ]
   },
   "author": "iainkirkpatrick",
   "license": "ISC",
@@ -19,7 +21,8 @@
     "redux": "^3.6.0",
     "redux-actions": "^1.2.1",
     "redux-thunk": "^2.2.0",
-    "reselect": "^2.5.4"
+    "reselect": "^2.5.4",
+    "stilr": "^1.3.0"
   },
   "devDependencies": {
     "babel-preset-es2015": "^6.22.0",
