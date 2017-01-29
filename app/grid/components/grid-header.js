@@ -4,6 +4,10 @@ import styles from '../styles/grid-header'
 
 export default function Grid (props) {
   return <div className={styles.container}>
-    <span>[developer]</span>
+    {
+      props.projects.map((proj) => {
+        return <span>{proj.id}</span>
+      })
+    }
   </div>
 }

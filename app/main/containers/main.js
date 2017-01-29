@@ -5,7 +5,6 @@ import Main from '../components/main'
 
 class MainContainer extends React.Component {
   render () {
-    console.log(this.props)
     return <Main dummyAppName={this.props.main.dummyAppName} />
   }
 }

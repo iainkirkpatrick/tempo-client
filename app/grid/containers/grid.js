@@ -6,6 +6,8 @@ import Grid from '../components/grid'
 
 import { getProjects } from '../../projects/actions'
 
+import { getGridProps } from '../getters'
+
 import styles from '../styles/grid'
 
 class GridContainer extends React.Component {
@@ -16,15 +18,17 @@ class GridContainer extends React.Component {
   }
 
   render () {
+    const { projects } = this.props
+
     return <div className={styles.container}>
-      <GridHeader />
+      <GridHeader projects={projects} />
       <Grid />
     </div>
   }
 }
 
 export default connect(
-  (state) => state,
+  getGridProps,
   {
     getProjects
   }

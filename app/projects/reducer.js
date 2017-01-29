@@ -1,6 +1,7 @@
 import { combineReducers } from 'redux'
 
-const projects = function (state = {}, action) {
+// TODO: normalise state
+const projects = function (state = [], action) {
   switch (action.type) {
     case 'GET_PROJECTS_SUCCESS':
       return action.payload.data.projects
