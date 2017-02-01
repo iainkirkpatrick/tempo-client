@@ -8,5 +8,5 @@ WIP - react / redux / apollo-client client for Tempo
 
 ### TODO
 - [X] at least one query to graphql server
-- [ ] general approach to querying that takes advantage of graphql
+- [X] general approach to querying that takes advantage of graphql
 - [ ] basic view for projects / developers
