@@ -5,32 +5,27 @@ import { graphql, compose } from 'react-apollo'
 import GridHeader from '../components/grid-header'
 import Grid from '../components/grid'
 
-import { getProjects } from '../../projects/actions'
+import { toggleDataType } from '../../main/actions'
 
-import { projectsQuery } from '../queries'
+import { projectsDevelopersQuery } from '../queries'
 
 import { getGridProps } from '../getters'
 
 import styles from '../styles/grid'
 
 class GridContainer extends React.Component {
-  // componentWillMount () {
-  //   const { getProjects } = this.props
-  //
-  //   getProjects()
-  // }
-
   render () {
-    const { data } = this.props
+    const { data, dataType, toggleDataType } = this.props
 
     return <div className={styles.container}>
-      <GridHeader projects={data.loading ? [] : data.projects} />
+      <GridHeader data={data.loading ? [] : data[dataType]} dataType={dataType} />
       <Grid />
+      <button onClick={() => { toggleDataType() }}>TOGGLE</button>
     </div>
   }
 }
 
 export default compose(
-  graphql(projectsQuery),
-  connect(getGridProps, { getProjects })
+  graphql(projectsDevelopersQuery),
+  connect(getGridProps, { toggleDataType })
 )(GridContainer)
