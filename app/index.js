@@ -1,9 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { Provider } from 'react-redux'
+// import { Provider } from 'react-redux'
+import { ApolloProvider } from 'react-apollo'
+
 import StyleSheet from 'stilr'
 
 import store from './store'
+import apolloClient from './apollo-client'
 
 import MainContainer from './main/containers/main'
 
@@ -17,8 +20,8 @@ const mount = document.createElement('app')
 document.body.appendChild(mount)
 
 ReactDOM.render(
-  <Provider store={store}>
+  <ApolloProvider store={store} client={apolloClient}>
     <MainContainer />
-  </Provider>,
+  </ApolloProvider>,
   document.body.querySelector('app')
 )
