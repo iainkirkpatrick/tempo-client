@@ -12,6 +12,9 @@
       "babelify"
     ]
   },
+  "standard": {
+    "parser": "babel-eslint"
+  },
   "author": "iainkirkpatrick",
   "license": "ISC",
   "dependencies": {
