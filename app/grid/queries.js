@@ -1,14 +1,23 @@
 import gql from 'graphql-tag'
 
-export const projectsDevelopersQuery = gql`
-  query ProjectsDeveloprs {
-    projects {
-      id
-      title
-    }
+export const developersQuery = gql`
+  query Developrs {
     developers {
       id
       firstName
+    }
+  }
+`
+
+export const projectsQuery = gql`
+  query Projects {
+    projects {
+      id
+      title
+      developers {
+        id
+        firstName
+      }
     }
   }
 `

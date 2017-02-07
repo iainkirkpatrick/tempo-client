@@ -5,5 +5,5 @@ import { getProjects } from '../projects/getters'
 
 export const getGridProps = createStructuredSelector({
   dataType: getDataType,
-  projects: getProjects
+  // projects: getProjects
 })

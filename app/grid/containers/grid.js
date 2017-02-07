@@ -7,7 +7,7 @@ import Grid from '../components/grid'
 
 import { toggleDataType } from '../../main/actions'
 
-import { projectsDevelopersQuery } from '../queries'
+import { developersQuery, projectsQuery } from '../queries'
 
 import { getGridProps } from '../getters'
 
@@ -15,7 +15,8 @@ import styles from '../styles/grid'
 
 class GridContainer extends React.Component {
   render () {
-    const { data, dataType, toggleDataType } = this.props
+    const { dataType, toggleDataType } = this.props
+    const data = this.props[dataType]
 
     return <div className={styles.container}>
       <GridHeader data={data.loading ? [] : data[dataType]} dataType={dataType} />
@@ -25,7 +26,9 @@ class GridContainer extends React.Component {
   }
 }
 
+// TODO: figure out if it's a good idea to name the query with the same name as the data coming through, as ends up being developers.developers etc
 export default compose(
-  graphql(projectsDevelopersQuery),
+  graphql(developersQuery, { name: 'developers' }),
+  graphql(projectsQuery, { name: 'projects' }),
   connect(getGridProps, { toggleDataType })
 )(GridContainer)
