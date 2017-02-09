@@ -19,9 +19,8 @@ class GridContainer extends React.Component {
     const data = this.props[dataType]
 
     return <div className={styles.container}>
-      <GridHeader data={data.loading ? [] : data[dataType]} dataType={dataType} />
+      <GridHeader data={data.loading ? [] : data[dataType]} dataType={dataType} toggleDataType={toggleDataType} />
       <Grid />
-      <button onClick={() => { toggleDataType() }}>TOGGLE</button>
     </div>
   }
 }
