@@ -1,5 +1,4 @@
 import React from 'react'
-import format from 'date-fns/format'
 import eachDay from 'date-fns/each_day'
 import subDays from 'date-fns/sub_days'
 
