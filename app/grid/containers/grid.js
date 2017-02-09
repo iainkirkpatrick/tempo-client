@@ -16,11 +16,12 @@ import styles from '../styles/grid'
 class GridContainer extends React.Component {
   render () {
     const { dataType, toggleDataType } = this.props
-    const data = this.props[dataType]
+    // TODO: this is pretty confusing with the nested [dataType]
+    const data = this.props[dataType].loading ? [] : this.props[dataType][dataType]
 
     return <div className={styles.container}>
-      <GridHeader data={data.loading ? [] : data[dataType]} dataType={dataType} toggleDataType={toggleDataType} />
-      <Grid />
+      <GridHeader data={data} dataType={dataType} toggleDataType={toggleDataType} />
+      <Grid data={data} dataType={dataType} />
     </div>
   }
 }

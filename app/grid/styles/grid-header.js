@@ -4,9 +4,8 @@ export default StyleSheet.create({
   container: {
     display: 'flex',
     flexDirection: 'column',
-
     alignItems: 'center',
-    height: 100
+    height: 120
   },
   infoContainer: {
     display: 'flex',
@@ -16,21 +15,18 @@ export default StyleSheet.create({
   },
   headersContainer: {
     display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-between'
+    flexDirection: 'row'
   },
   dataType: {
-    
+    padding: '5px 0px'
   },
   projectHeader: {
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    width: '100%',
-    height: '100%',
-    paddingLeft: 10,
-    paddingRight: 10
+    width: 150,
+    padding: 5
   },
   projectTitle: {
     textAlign: 'center',
