@@ -5,7 +5,9 @@ export default StyleSheet.create({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    height: 120
+    height: 120,
+    width: '100%',
+    borderBottom: '1px solid black'
   },
   infoContainer: {
     display: 'flex',
