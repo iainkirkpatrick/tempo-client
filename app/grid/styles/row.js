@@ -3,13 +3,13 @@ import StyleSheet from 'stilr'
 export default StyleSheet.create({
   container: {
     display: 'flex',
-    flexDirection: 'column',
+    flexDirection: 'row',
     alignItems: 'center',
-    width: '100%'
+    justifyContent: 'center'
   },
-  gridContainer: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center'
+  cell: {
+    height: 150,
+    width: 150,
+    border: '1px solid black'
   }
 })
